@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/TheCatAPI/static/css/main.92102c5f.css",
-    "main.js": "/TheCatAPI/static/js/main.249d84cb.js",
+    "main.js": "/TheCatAPI/static/js/main.440c282d.js",
     "index.html": "/TheCatAPI/index.html",
     "main.92102c5f.css.map": "/TheCatAPI/static/css/main.92102c5f.css.map",
-    "main.249d84cb.js.map": "/TheCatAPI/static/js/main.249d84cb.js.map"
+    "main.440c282d.js.map": "/TheCatAPI/static/js/main.440c282d.js.map"
   },
   "entrypoints": [
     "static/css/main.92102c5f.css",
-    "static/js/main.249d84cb.js"
+    "static/js/main.440c282d.js"
   ]
 }
