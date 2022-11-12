@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TheCatAPI/static/css/main.92102c5f.css",
+    "main.js": "/TheCatAPI/static/js/main.9b9514ce.js",
+    "index.html": "/TheCatAPI/index.html",
+    "main.92102c5f.css.map": "/TheCatAPI/static/css/main.92102c5f.css.map",
+    "main.9b9514ce.js.map": "/TheCatAPI/static/js/main.9b9514ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.92102c5f.css",
+    "static/js/main.9b9514ce.js"
+  ]
+}
