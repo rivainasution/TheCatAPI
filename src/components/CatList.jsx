@@ -95,12 +95,14 @@ function CatList({item: {
                   </div>
                   <div class="p-2">
                     <Row>
-                        <Col md>
+                        <Col md lg={5}>
                             <Badge bg="secondary">{origin}</Badge>
                         </Col>
-                        <Col md>
+                        <Col md lg={7}>
+                            <div className='d-flex flex-row'>
                             <Badge bg="secondary" className="mx-2">{country_codes}</Badge>
                             {rareHandle()}
+                            </div>
                         </Col>
                     </Row>
                     <h5 class="card-title fw-bold mt-3 mb-2">{name}</h5>
