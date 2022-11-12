@@ -14,13 +14,14 @@ const Gambar = (props) => {
     },[]);
 
     return(
-        <>
+        <>  
+            {/* Menampilkan Gambar KuCing */}
             {gambar.map((gmbr) => (
                 <div key={gmbr.id}>
                     <Image 
                         className="d-block w-100"
                         src={gmbr.url}
-                        alt="mandheling coffee"
+                        alt="Cat"
                     />
                 </div>
             ))} 
