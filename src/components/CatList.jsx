@@ -187,7 +187,7 @@ function CatList({item: {
                                 <Col md>
                                     <div className="d-flex justify-content-between flex-row">
                                         <h6>Life Span </h6>
-                                        <h6>{starHandling(life_span)}</h6>
+                                        <h6>{life_span}</h6>
                                     </div>
                                 </Col>
                                 <Col md>
