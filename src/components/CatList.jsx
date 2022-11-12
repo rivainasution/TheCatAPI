@@ -108,41 +108,17 @@ function CatList({item: {
                     <h5 class="card-title fw-bold mt-3 mb-2">{name}</h5>
                     <Row>
                         <Col md>
-                            <h6>Affection Level: </h6>
+                            <h6>Affection Level</h6>
+                            <h6>Adaptability</h6>
+                            <h6>Energy Level</h6>
+                            <h6>Intelligence</h6>
+                            <h6>Vocalisation</h6>
                         </Col>
                         <Col md>
                             <h6>{starHandling(affection_level)}</h6>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md>
-                            <h6>Adaptability: </h6>
-                        </Col>
-                        <Col md>
                             <h6>{starHandling(adaptability)}</h6>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md>
-                            <h6>Energy Level: </h6>
-                        </Col>
-                        <Col md>
                             <h6>{starHandling(energy_level)}</h6>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md>
-                            <h6>Intelligence: </h6>
-                        </Col>
-                        <Col md>
                             <h6>{starHandling(intelligence)}</h6>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md>
-                            <h6>Vocalisation: </h6>
-                        </Col>
-                        <Col md>
                             <h6>{starHandling(vocalisation)}</h6>
                         </Col>
                     </Row>
