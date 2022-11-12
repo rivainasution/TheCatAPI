@@ -47,19 +47,19 @@ function CatList({item: {
         //Check Rarity
         const rareHandle = () => {
             if(rare == 0){
-                return (<Badge bg="secondary">Rarity: {rare}</Badge>);
+                return (<Badge bg="secondary" className="mx-2">Rarity: {rare}</Badge>);
             }
             if(rare == 2){
-                return (<Badge bg="primary">Rarity: {rare}</Badge>);
+                return (<Badge bg="primary" className="mx-2">Rarity: {rare}</Badge>);
             }
             if(rare == 3){
-                return (<Badge bg="info">Rarity: {rare}</Badge>);
+                return (<Badge bg="info" className="mx-2">Rarity: {rare}</Badge>);
             }
             if(rare == 4){
-                return (<Badge bg="danger">Rarity: {rare}</Badge>);
+                return (<Badge bg="danger" className="mx-2">Rarity: {rare}</Badge>);
             }
             if(rare == 5){
-                return (<Badge bg="warning">Rarity: {rare}</Badge>);
+                return (<Badge bg="warning" className="mx-2">Rarity: {rare}</Badge>);
             }
         }
 
@@ -100,32 +100,52 @@ function CatList({item: {
                         </Col>
                         <Col md lg={7}>
                             <div className='d-flex flex-row'>
-                            <Badge bg="secondary" className="mx-2">{country_codes}</Badge>
-                            {rareHandle()}
+                                <Badge bg="secondary">{country_codes}</Badge>
+                                {rareHandle()}
                             </div>
                         </Col>
                     </Row>
                     <h5 class="card-title fw-bold mt-3 mb-2">{name}</h5>
-                    <div className="d-flex justify-content-between flex-row">
-                        <h6>Affection Level: </h6>
-                        <h6>{starHandling(affection_level)}</h6>
-                    </div>
-                    <div className="d-flex justify-content-between flex-row">
-                        <h6>Adaptability: </h6>
-                        <h6>{starHandling(adaptability)}</h6>
-                    </div>
-                    <div className="d-flex justify-content-between flex-row">
-                        <h6>Energy Level: </h6>
-                        <h6>{starHandling(energy_level)}</h6>
-                    </div>
-                    <div className="d-flex justify-content-between flex-row">
-                        <h6>Intelligence: </h6>
-                        <h6>{starHandling(intelligence)}</h6>
-                    </div>
-                    <div className="d-flex justify-content-between flex-row">
-                        <h6>Vocalisation: </h6>
-                        <h6>{starHandling(vocalisation)}</h6>
-                    </div>
+                    <Row>
+                        <Col md>
+                            <h6>Affection Level: </h6>
+                        </Col>
+                        <Col md>
+                            <h6>{starHandling(affection_level)}</h6>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md>
+                            <h6>Adaptability: </h6>
+                        </Col>
+                        <Col md>
+                            <h6>{starHandling(adaptability)}</h6>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md>
+                            <h6>Energy Level: </h6>
+                        </Col>
+                        <Col md>
+                            <h6>{starHandling(energy_level)}</h6>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md>
+                            <h6>Intelligence: </h6>
+                        </Col>
+                        <Col md>
+                            <h6>{starHandling(intelligence)}</h6>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col md>
+                            <h6>Vocalisation: </h6>
+                        </Col>
+                        <Col md>
+                            <h6>{starHandling(vocalisation)}</h6>
+                        </Col>
+                    </Row>
                   </div> 
                   <Button variant='outline-primary' onClick={() => clickHandler()}
                   >Detail</Button>
@@ -185,156 +205,244 @@ function CatList({item: {
                             </Row>
                             <Row>
                                 <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Life Span </h6>
-                                        <h6>{life_span}</h6>
-                                    </div>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Life Span </h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{life_span}</h6>
+                                        </Col>
+                                    </Row>
                                 </Col>
                                 <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Indoor: </h6>
-                                        <h6>{starHandling(indoor)}</h6>
-                                    </div>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Lap</h6>
-                                        <h6>{starHandling(lap)}</h6>
-                                    </div>
-                                </Col>
-                                <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Adaptability</h6>
-                                        <h6>{starHandling(adaptability)}</h6>
-                                    </div>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Indoor: </h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(indoor)}</h6>
+                                        </Col>
+                                    </Row>
                                 </Col>
                             </Row>
                             <Row>
                                 <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Affection level</h6>
-                                        <h6>{starHandling(affection_level)}</h6>
-                                    </div>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Lap</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(lap)}</h6>
+                                        </Col>
+                                    </Row>
                                 </Col>
                                 <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Child Friendly</h6>
-                                        <h6>{starHandling(child_friendly)}</h6>
-                                    </div>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Dog Friendly</h6>
-                                        <h6>{starHandling(dog_friendly)}</h6>
-                                    </div>
-                                </Col>
-                                <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Energy Level</h6>
-                                        <h6>{starHandling(energy_level)}</h6>
-                                    </div>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Adaptability</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(adaptability)}</h6>
+                                        </Col>
+                                    </Row>
                                 </Col>
                             </Row>
                             <Row>
                                 <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Grooming</h6>
-                                        <h6>{starHandling(grooming)}</h6>
-                                    </div>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Affection level</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(affection_level)}</h6>
+                                        </Col>
+                                    </Row>
                                 </Col>
                                 <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>health Issues</h6>
-                                        <h6>{starHandling(health_issues)}</h6>
-                                    </div>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>inteligence</h6>
-                                        <h6>{starHandling(intelligence)}</h6>
-                                    </div>
-                                </Col>
-                                <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Shedding Level</h6>
-                                        <h6>{starHandling(shedding_level)}</h6>
-                                    </div>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Child Friendly</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(child_friendly)}</h6>
+                                        </Col>
+                                    </Row>
                                 </Col>
                             </Row>
                             <Row>
                                 <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Social Needs</h6>
-                                        <h6>{starHandling(social_needs)}</h6>
-                                    </div>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Dog Friendly</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(dog_friendly)}</h6>
+                                        </Col>
+                                    </Row>
                                 </Col>
                                 <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Stranger Friendly</h6>
-                                        <h6>{starHandling(stranger_friendly)}</h6>
-                                    </div>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Vocalisation</h6>
-                                        <h6>{starHandling(vocalisation)}</h6>
-                                    </div>
-                                </Col>
-                                <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Experimental</h6>
-                                        <h6>{starHandling(experimental)}</h6>
-                                    </div>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Energy Level</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(energy_level)}</h6>
+                                        </Col>
+                                    </Row>
                                 </Col>
                             </Row>
                             <Row>
                                 <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Hairless</h6>
-                                        <h6>{starHandling(hairless)}</h6>
-                                    </div>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Grooming</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(grooming)}</h6>
+                                        </Col>
+                                    </Row>
                                 </Col>
                                 <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Natural</h6>
-                                        <h6>{starHandling(natural)}</h6>
-                                    </div>
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Rex</h6>
-                                        <h6>{starHandling(rex)}</h6>
-                                    </div>
-                                </Col>
-                                <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Suppressed tails</h6>
-                                        <h6>{starHandling(suppressed_tail)}</h6>
-                                    </div>
+                                    <Row>
+                                        <Col md>
+                                            <h6>health Issues</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(health_issues)}</h6>
+                                        </Col>
+                                    </Row>
                                 </Col>
                             </Row>
                             <Row>
                                 <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Short legs</h6>
-                                        <h6>{starHandling(short_legs)}</h6>
-                                    </div>
+                                    <Row>
+                                        <Col md>
+                                            <h6>inteligence</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(intelligence)}</h6>
+                                        </Col>
+                                    </Row>
                                 </Col>
                                 <Col md>
-                                    <div className="d-flex justify-content-between flex-row">
-                                        <h6>Hypoallergenic </h6>
-                                        <h6>{starHandling(hypoallergenic)}</h6>
-                                    </div>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Shedding Level</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(shedding_level)}</h6>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col md>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Social Needs</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(social_needs)}</h6>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col md>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Stranger Friendly</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(stranger_friendly)}</h6>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col md>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Vocalisation</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(vocalisation)}</h6>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col md>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Experimental</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(experimental)}</h6>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col md>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Hairless</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(hairless)}</h6>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col md>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Natural</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(natural)}</h6>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col md>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Rex</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(rex)}</h6>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col md>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Suppressed tails</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(suppressed_tail)}</h6>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col md>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Short legs</h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(short_legs)}</h6>
+                                        </Col>
+                                    </Row>
+                                </Col>
+                                <Col md>
+                                    <Row>
+                                        <Col md>
+                                            <h6>Hypoallergenic </h6>
+                                        </Col>
+                                        <Col md>
+                                            <h6>{starHandling(hypoallergenic)}</h6>
+                                        </Col>
+                                    </Row>
                                 </Col>
                             </Row>
                         </Col>  
