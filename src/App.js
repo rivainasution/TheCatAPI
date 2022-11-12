@@ -6,6 +6,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Loader from "./components/Loading";
 import EndMsg from "./components/EndMsg";
 import CatList from "./components/CatList";
+import Footers from "./components/Footer";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -56,55 +57,58 @@ function App() {
   }, [query]);
 
   return (
-    <Container className='my-5'>
-      <h1 className="text-center my-3">The Cats API</h1>
-        <input
-          type="search"
-          className="mb-5"
-          placeholder="search"
-          onChange={(e) => setQuery(e.target.value.toUpperCase())}
-        />
+    <>
+      <Container className='my-5'>
+        <h1 className="text-center my-3">The Cats API</h1>
+          <input
+            type="search"
+            className="mb-5"
+            placeholder="search"
+            onChange={(e) => setQuery(e.target.value.toUpperCase())}
+          />
 
-      {
-        // Jika panjang query = 0 atau belum melakukan searching
-        query.length == 0? 
-          //Menampilkan semua kucing
-          <InfiniteScroll
-            dataLength={items.length} 
-            next={fetchData}
-            hasMore={hasMore}
-            loader={<Loader />}
-            endMessage={<EndMsg />}
-          >
-            <div class="row my-3">
-              {items.map((item) => {
-                return <CatList key={item.id} item={item} />;
-              })}
-            </div>
-          
-          </InfiniteScroll>
-          : 
-          //menampilkan kucing berdasarkan pencarian
-          <InfiniteScroll
-            dataLength={items.length} 
-            next={fetchData}
-            hasMore={hasMore}
-            loader={<Loader />}
-            endMessage={<EndMsg />}
-          >
-            
-          <div class="row my-3">
-            {data.map((br) => (
+        {
+          // Jika panjang query = 0 atau belum melakukan searching
+          query.length == 0? 
+            //Menampilkan semua kucing
+            <InfiniteScroll
+              dataLength={items.length} 
+              next={fetchData}
+              hasMore={hasMore}
+              loader={<Loader />}
+              endMessage={<EndMsg />}
+            >
               <div class="row my-3">
-                {data.map((item) => {
+                {items.map((item) => {
                   return <CatList key={item.id} item={item} />;
                 })}
               </div>
-            ))}
-          </div>
-        </InfiniteScroll>
-      }
-    </Container>
+            
+            </InfiniteScroll>
+            : 
+            //menampilkan kucing berdasarkan pencarian
+            <InfiniteScroll
+              dataLength={items.length} 
+              next={fetchData}
+              hasMore={hasMore}
+              loader={<Loader />}
+              endMessage={<EndMsg />}
+            >
+              
+            <div class="row my-3">
+              {data.map((br) => (
+                <div class="row my-3">
+                  {data.map((item) => {
+                    return <CatList key={item.id} item={item} />;
+                  })}
+                </div>
+              ))}
+            </div>
+            </InfiniteScroll>
+          }
+      </Container>
+      <Footers />
+    </>
   );
 }
 

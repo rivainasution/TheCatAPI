@@ -100,8 +100,6 @@ function CatList({item: {
                         </Col>
                         <Col md>
                             <Badge bg="secondary" className="mx-2">{country_codes}</Badge>
-                        </Col>
-                        <Col md>
                             {rareHandle()}
                         </Col>
                     </Row>
