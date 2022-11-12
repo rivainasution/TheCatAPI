@@ -94,11 +94,17 @@ function CatList({item: {
                     <Gambar id={id} />
                   </div>
                   <div class="p-2">
-                    <div className="d-flex flex-row">
-                        <Badge bg="secondary">{origin}</Badge>
-                        <Badge bg="secondary" className="mx-2">{country_codes}</Badge>
-                        {rareHandle()}
-                    </div>
+                    <Row>
+                        <Col md>
+                            <Badge bg="secondary">{origin}</Badge>
+                        </Col>
+                        <Col md>
+                            <Badge bg="secondary" className="mx-2">{country_codes}</Badge>
+                        </Col>
+                        <Col md>
+                            {rareHandle()}
+                        </Col>
+                    </Row>
                     <h5 class="card-title fw-bold mt-3 mb-2">{name}</h5>
                     <div className="d-flex justify-content-between flex-row">
                         <h6>Affection Level: </h6>
